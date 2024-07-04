@@ -29,7 +29,13 @@ function ProfilePage() {
             <p>Email: {profileInfo.email}</p>
             <p>Ciudad: {profileInfo.city}</p>
             {profileInfo.role === "ADMIN" && (
-                <button><Link to={`/update-user/${profileInfo.id}`}>Actualizar este perfil </Link></button>
+                
+                <button className="btn btn-primary">
+                <Link to={`/update-user/${profileInfo.id}`} className="text-white text-decoration-none">
+                    Actualizar este perfil
+                </Link>
+            </button>
+
             )}
         </div>
     );
