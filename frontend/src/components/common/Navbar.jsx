@@ -22,7 +22,7 @@ function Navbar() {
                 {!isAuthenticated && <li><Link to="/">Marco Dev</Link></li>}
                 {isAuthenticated && <li><Link to="/profile">Perfil</Link></li>}
                 {isAdmin && <li><Link to="/admin/user-management">Gestión de usuarios</Link></li>}
-                {isAuthenticated && <li><Link to="/" onClick={handleLogout}>Cerrar sesión </Link></li>}
+                {isAuthenticated && <li><Link to="/" onClick={handleLogout}>Cerrar sesión</Link></li>}
             </ul>
         </nav>
     );
