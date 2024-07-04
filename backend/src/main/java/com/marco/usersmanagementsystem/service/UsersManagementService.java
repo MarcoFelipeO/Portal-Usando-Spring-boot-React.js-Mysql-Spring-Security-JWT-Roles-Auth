@@ -39,7 +39,7 @@ public class UsersManagementService {
             OurUsers ourUsersResult = usersRepo.save(ourUser);
             if (ourUsersResult.getId()>0) {
                 resp.setOurUsers((ourUsersResult));
-                resp.setMessage("Usuario Guardado Exitosamente");
+                resp.setMessage("Usuari Guardado Exitosamente");
                 resp.setStatusCode(200);
             }
 
