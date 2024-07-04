@@ -51,7 +51,7 @@ function UpdateUser() {
       }
 
     } catch (error) {
-      console.error('Error updating user profile:', error);
+      console.error('Error al cargar el perfil del Usuario:', error);
       alert(error)
     }
   };
