@@ -24,6 +24,8 @@ function Navbar() {
                 <a className="navbar-brand nav-link" href="/">
                     <img src={logo} alt="Logo" style={{ width: '100px', borderRadius: '50%' }} /></a> 
                 <a className="navbar-brand nav-link" href="/">Inicio</a>
+                <a className="navbar-brand nav-link" href="/">Apartado2</a>
+                <a className="navbar-brand nav-link" href="/">Apartado3</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

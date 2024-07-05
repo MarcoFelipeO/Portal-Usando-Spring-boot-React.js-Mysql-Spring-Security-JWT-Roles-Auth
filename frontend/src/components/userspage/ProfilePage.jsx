@@ -34,10 +34,13 @@ function ProfilePage() {
                 <Link to={`/update-user/${profileInfo.id}`} className="text-white text-decoration-none">
                     Actualizar este perfil
                 </Link>
-            </button>
+                </button>
 
             )}
+                &sbn;
+                <button > <Link to="/admin/user-management"></Link> Apartado administrador</button>
         </div>
+        
     );
 }
 

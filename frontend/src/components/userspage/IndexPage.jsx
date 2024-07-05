@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../images/estrellas.jpg';
+import '../../images/estrellas3.jpg';
 
 const IndexPage = () => {
     return (
