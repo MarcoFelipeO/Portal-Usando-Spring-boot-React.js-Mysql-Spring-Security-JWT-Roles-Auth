@@ -13,3 +13,31 @@
     background-color: transparent; /* Desactiva el cambio de color de fondo */
     color: white !important; /* Mantiene el color blanco del texto */
 }
+
+
+/* src/styles/custom.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.background-image {
+    background-image: url('/../../users-management-system-java-react/frontend/src/images/estrellas.jpg'); /* Ruta relativa desde la carpeta public */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 100vh; /* Asegúrate de que el contenedor tenga al menos la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+.container-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
