@@ -18,10 +18,10 @@ function App() {
         <div className="content">
           <Routes>
             {/* Primera ruta para la página de inicio */}
-            <Route exact path="/IndexPage" element={<IndexPage />} />
+            <Route exact path="/" element={<IndexPage />} />
+            <Route exact path="/index" element={<IndexPage />} />
             
             {/* Rutas restantes */}
-            <Route exact path="/" element={<LoginPage />} />
             <Route exact path="/login" element={<LoginPage />} />
             <Route path="/profile" element={<ProfilePage />} />
 
@@ -35,7 +35,7 @@ function App() {
             )}
             
             {/* Ruta de fallback para redirigir a la página de inicio de sesión si la URL no coincide con ninguna ruta definida */}
-            <Route path="*" element={<Navigate to="/login" />} />
+            <Route path="*" element={<Navigate to="/index" />} />
           </Routes>
         </div>
         <FooterComponent />
