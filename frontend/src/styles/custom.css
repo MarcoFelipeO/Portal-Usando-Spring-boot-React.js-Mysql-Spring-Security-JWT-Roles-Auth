@@ -1,0 +1,15 @@
+/* src/styles/custom.css */
+
+.navbar {
+    background-color: black !important;
+}
+
+.nav-link {
+    color: white !important;
+    transition: none; /* Desactiva la transición */
+}
+
+.nav-link:hover {
+    background-color: transparent; /* Desactiva el cambio de color de fondo */
+    color: white !important; /* Mantiene el color blanco del texto */
+}
