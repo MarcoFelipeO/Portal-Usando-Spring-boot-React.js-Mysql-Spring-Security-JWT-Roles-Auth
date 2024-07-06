@@ -41,3 +41,9 @@ html, body {
     flex-direction: column;
     padding: 20px;
 }
+
+/* src/styles/custom.css */
+.bg-dark {
+    background-color: #000000 !important;
+}
+
