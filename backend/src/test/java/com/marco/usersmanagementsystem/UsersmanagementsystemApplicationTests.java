@@ -1,4 +1,4 @@
-package com.phegondev.usersmanagementsystem;
+package com.marco.usersmanagementsystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

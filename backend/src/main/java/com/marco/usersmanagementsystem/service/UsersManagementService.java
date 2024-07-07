@@ -89,7 +89,7 @@ public class UsersManagementService {
                 response.setToken(jwt);
                 response.setRefreshToken(refreshTokenReqiest.getToken());
                 response.setExpirationTime("24Hr");
-                response.setMessage("Successfully Refreshed Token");
+                response.setMessage("Token Actualizado Satisfactoriamente");
             }
             response.setStatusCode(200);
             return response;
