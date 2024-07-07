@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import UserService from '../service/UserService';
 import { Link } from 'react-router-dom';
 
-
-
 function ProfilePage() {
     const [profileInfo, setProfileInfo] = useState({});
 
@@ -13,7 +11,6 @@ function ProfilePage() {
 
     const fetchProfileInfo = async () => {
         try {
-
             const token = localStorage.getItem('token'); // Retrieve the token from localStorage
             const response = await UserService.getYourProfile(token);
             setProfileInfo(response.ourUsers);
@@ -29,18 +26,18 @@ function ProfilePage() {
             <p>Email: {profileInfo.email}</p>
             <p>Ciudad: {profileInfo.city}</p>
             {profileInfo.role === "ADMIN" && (
-                
-                <button className="btn btn-primary">
-                <Link to={`/update-user/${profileInfo.id}`} className="text-white text-decoration-none">
-                    Actualizar este perfil
-                </Link>
-                </button>
-
+                <>
+                    <button className="btn btn-primary">
+                        <Link to={`/update-user/${profileInfo.id}`} className="text-white text-decoration-none">
+                            Actualizar este perfil
+                        </Link>
+                    </button>
+                    <button>
+                        <Link to="/admin/user-management">Apartado administrador</Link>
+                    </button>
+                </>
             )}
-                &sbn;
-                <button > <Link to="/admin/user-management"></Link> Apartado administrador</button>
         </div>
-        
     );
 }
 

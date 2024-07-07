@@ -47,3 +47,22 @@ html, body {
     background-color: #000000 !important;
 }
 
+/* src/styles/custom.css */
+.custom-button {
+    padding: 5px 10px; /* Ajusta el padding para que el botón sea más delgado */
+    margin-right: 8px; /* Añade un margen a la derecha del botón */
+}
+
+.github-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.ms-2 {
+    margin-left: 8px; /* Bootstrap clase para margen izquierdo */
+}
+
+.navbar-nav .nav-item.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+}
