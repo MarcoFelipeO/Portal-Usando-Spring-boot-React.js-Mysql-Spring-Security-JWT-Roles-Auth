@@ -43,7 +43,7 @@ function UserManagementPage() {
   return (
     <div className="user-management-container">
       <h2>Gestión de usuarios</h2>
-      <button className='reg-button'> <Link to="/register">Agregar Usuario</Link></button>
+       <Link to="/register" className='btn btn-primary' id='botonAgregar'>Agregar Usuario</Link>
       <table>
         <thead>
           <tr>
@@ -61,8 +61,9 @@ function UserManagementPage() {
               <td>{user.email}</td>
 
               <td>
-                <button className='delete-button' onClick={() => deleteUser(user.id)}>Eliminar</button>
-                <button><Link to={`/update-user/${user.id}`}>Actualizar</Link></button>
+                <Link className='btn btn-danger' onClick={() => deleteUser(user.id)}>Eliminar</Link>
+                
+               <Link to={`/update-user/${user.id}`}   className='btn btn-primary'>Actualizar</Link>
               </td>
 
             </tr>

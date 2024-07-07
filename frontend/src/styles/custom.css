@@ -24,7 +24,7 @@ html, body {
 }
 
 .background-image {
-    background-image: url('/../../users-management-system-java-react/frontend/src/images/estrellas3.jpg'); /* Ruta relativa desde la carpeta public */
+    background-image: url('/../../users-management-system-java-react/frontend/src/images/foto3.jpg'); /* Ruta relativa desde la carpeta public */
     background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -66,3 +66,5 @@ html, body {
     display: flex;
     align-items: center;
 }
+
+

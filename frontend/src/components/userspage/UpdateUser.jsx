@@ -58,14 +58,14 @@ function UpdateUser() {
 
   return (
     <div className="auth-container">
-      <h2>Update User</h2>
+      <h2>Actualizar Usuario</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Name :</label>
+          <label>Nombre:</label>
           <input type="text" name="name" value={userData.name} onChange={handleInputChange} />
         </div>
         <div className="form-group">
-          <label>Email :</label>
+          <label>Email:</label>
           <input type="email" name="email" value={userData.email} onChange={handleInputChange} />
         </div>
         <div className="form-group">
