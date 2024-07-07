@@ -25,8 +25,8 @@ function Navbar() {
                     <img src={logo} alt="Logo" style={{ width: '100px', borderRadius: '50%' }} /></a> 
                 <a className="navbar-brand nav-link" href="/">Inicio</a>
                 <a className="navbar-brand nav-link" href="/">Apartado2</a>
-                <a className="navbar-brand nav-link" href="/">Apartado3</a>
-                <a className="navbar-brand nav-link" href="/">Apartado4</a>
+              {/*  <a className="navbar-brand nav-link" href="/">Apartado3</a>
+                <a className="navbar-brand nav-link" href="/">Apartado4</a> */}
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -49,7 +49,7 @@ function Navbar() {
                         )}
                         {isAuthenticated && (
                             <li className="nav-item">
-                                <Link className="nav-link" to="/" onClick={handleLogout}>Cerrar sesión</Link>
+                                <Link className="nav-link" to="/index" onClick={handleLogout}>Cerrar sesión</Link>
                             </li>
                         )}
                     </ul>
