@@ -28,7 +28,7 @@ function App() {
             {/* Verificar si el usuario está autenticado y es administrador antes de renderizar rutas solo para administradores */}
             {UserService.adminOnly() && (
               <>
-                <Route path="/register" element={<RegistrationPage />} />
+                <Route path="/admin/register" element={<RegistrationPage />} />
                 <Route path="/admin/user-management" element={<UserManagementPage />} />
                 <Route path="/update-user/:userId" element={<UpdateUser />} />
               </>

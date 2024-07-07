@@ -41,7 +41,7 @@ function UpdateUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const confirmDelete = window.confirm('Are you sure you want to delete this user?');
+      const confirmDelete = window.confirm('Estas seguro de que quieres actualizar a este Usuario?');
       if (confirmDelete) {
         const token = localStorage.getItem('token');
         const res = await UserService.updateUser(userId, userData, token);

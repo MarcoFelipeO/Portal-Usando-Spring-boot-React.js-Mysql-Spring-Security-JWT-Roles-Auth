@@ -43,7 +43,7 @@ function UserManagementPage() {
   return (
     <div className="user-management-container">
       <h2>Gestión de usuarios</h2>
-       <Link to="/register" className='btn btn-primary' id='botonAgregar'>Agregar Usuario</Link>
+       <Link to="/admin/register" className='btn btn-primary' id='botonAgregar'>Agregar Usuario</Link>
       <table>
         <thead>
           <tr>
