@@ -68,3 +68,13 @@ html, body {
 }
 
 
+.github-icon {
+    font-size: 24px;
+    color: white;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.github-icon:hover {
+    color: white; /* Mantén el color blanco incluso en el hover */
+}
