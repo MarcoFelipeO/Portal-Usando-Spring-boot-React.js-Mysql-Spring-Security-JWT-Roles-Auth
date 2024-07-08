@@ -30,7 +30,7 @@ const IndexPage = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Descarga mi CV</h5>
                                 <p className="card-text text-white">This is a short description of the second card. It contains brief information about the content.</p>
-                                <Link to="/link2" className="btn btn btn-outline-danger">Descargar CV</Link>
+                                <Link to="/link2" className="btn btn btn-outline-danger">Descargar CV </Link>
                             </div>
                         </div>
                     </div>
