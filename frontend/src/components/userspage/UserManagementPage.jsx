@@ -1,4 +1,3 @@
-// components/UserManagementPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import UserService from '../service/UserService';
@@ -7,69 +6,62 @@ function UserManagementPage() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch users data when the component mounts
     fetchUsers();
   }, []);
 
   const fetchUsers = async () => {
     try {
-
-      const token = localStorage.getItem('token'); // Retrieve the token from localStorage
+      const token = localStorage.getItem('token');
       const response = await UserService.getAllUsers(token);
-      //   console.log(response);
       setUsers(response.ourUsersList); // Assuming the list of users is under the key 'ourUsersList'
     } catch (error) {
-      console.error('Error al recuperar usuarios:', error);
+      console.error('Error fetching users:', error);
     }
   };
 
-
   const deleteUser = async (userId) => {
     try {
-      // Prompt for confirmation before deleting the user
       const confirmDelete = window.confirm('¿Estás seguro de que deseas eliminar este usuario?');
-
-      const token = localStorage.getItem('token'); // Retrieve the token from localStorage
       if (confirmDelete) {
+        const token = localStorage.getItem('token');
         await UserService.deleteUser(userId, token);
-        // After deleting the user, fetch the updated list of users
-        fetchUsers();
+        fetchUsers(); // Fetch updated users after deletion
       }
     } catch (error) {
-      console.error('Error al eliminar usuario:', error);
+      console.error('Error deleting user:', error);
     }
   };
 
   return (
     <div className="user-management-container">
-      <h2>Gestión de usuarios</h2>
-       <Link to="/admin/register" className='btn btn-primary' id='botonAgregar'>Agregar Usuario</Link>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
+      <h2 className="mb-4">Gestión de usuarios</h2>
+      <Link to="/admin/register" className="btn btn-primary mb-3">Agregar Usuario</Link>
 
-              <td>
-                <Link className='btn btn-danger' onClick={() => deleteUser(user.id)}>Eliminar</Link>
-                
-               <Link to={`/update-user/${user.id}`}   className='btn btn-primary'>Actualizar</Link>
-              </td>
-
+      <div className="table-responsive">
+        <table className="table table-striped mb-4">
+          <thead className="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Acciones</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map(user => (
+              <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>
+                  <Link to={`/update-user/${user.id}`} className="btn btn-sm btn-primary me-2">Actualizar</Link>
+                  <Link className="btn btn-sm btn-danger" onClick={() => deleteUser(user.id)}>Eliminar</Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

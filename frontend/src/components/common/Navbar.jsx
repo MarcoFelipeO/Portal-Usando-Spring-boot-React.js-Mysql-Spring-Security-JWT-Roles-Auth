@@ -13,7 +13,11 @@ function Navbar() {
     const handleLogout = () => {
         const confirmDelete = window.confirm('¿Estás seguro de que quieres cerrar sesión este usuario?');
         if (confirmDelete) {
+            // Limpiar token y cualquier otra información de sesión
             UserService.logout();
+
+            // Forzar recarga de la página
+            window.location.reload();
         }
     };
 
@@ -22,10 +26,11 @@ function Navbar() {
             <div className="container-fluid">
                 {/* Logo a la izquierda */}
                 <a className="navbar-brand nav-link" href="/">
-                    <img src={logo} alt="Logo" style={{ width: '100px', borderRadius: '50%' }} /></a> 
+                    <img src={logo} alt="Logo" style={{ width: '100px', borderRadius: '50%' }} />
+                </a>
                 <a className="navbar-brand nav-link" href="/">Inicio</a>
                 <a className="navbar-brand nav-link" href="/">Apartado2</a>
-              {/*  <a className="navbar-brand nav-link" href="/">Apartado3</a>
+                {/* <a className="navbar-brand nav-link" href="/">Apartado3</a>
                 <a className="navbar-brand nav-link" href="/">Apartado4</a> */}
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -34,7 +39,9 @@ function Navbar() {
                     <ul className="navbar-nav ms-auto">
                         {!isAuthenticated && (
                             <li className="nav-item">
-                           <button id="btn-uno" className="btn btn btn-outline-danger custom-button"> <Link className="nav-link" to="/login">Login</Link> </button>
+                                <button id="btn-uno" className="btn btn btn-outline-danger custom-button">
+                                    <Link className="nav-link" to="/login">Login</Link>
+                                </button>
                             </li>
                         )}
                         {isAuthenticated && (
