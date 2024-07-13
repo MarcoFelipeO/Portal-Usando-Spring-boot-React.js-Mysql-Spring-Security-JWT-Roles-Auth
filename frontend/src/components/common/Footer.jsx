@@ -4,10 +4,13 @@ import '../../styles/custom.css';
 
 const FooterComponent = () => {
     return (
-        <footer className="bg-dark text-white text-center py-3 fixed-bottom">
+        <footer className=''>
+       {/*  <footer className="bg-dark text-white text-center py-3 fixed-bottom">
             <div className="container">
                 <span>Marco Dev | Todos los derechos reservados &copy; {new Date().getFullYear()}</span>
             </div>
+        </footer>
+        */}
         </footer>
     );
 }
