@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Routes>
-            {/* Primera ruta para la página de inicio */}
+            {/* Primera ruta para la página de inicio  */}
             <Route exact path="/" element={<IndexPage />} />
             <Route exact path="/index" element={<IndexPage />} />
             <Route exact path="/pagina2" element={<PaginaNumeroDos />} /> 
