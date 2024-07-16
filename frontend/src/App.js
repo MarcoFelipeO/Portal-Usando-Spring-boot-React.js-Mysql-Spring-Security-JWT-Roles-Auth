@@ -9,6 +9,7 @@ import UpdateUser from './components/userspage/UpdateUser';
 import UserManagementPage from './components/userspage/UserManagementPage';
 import ProfilePage from './components/userspage/ProfilePage';
 import IndexPage from './components/userspage/IndexPage';
+import PaginaNumeroDos from './components/userspage/PaginaNumeroDos';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             {/* Primera ruta para la página de inicio */}
             <Route exact path="/" element={<IndexPage />} />
             <Route exact path="/index" element={<IndexPage />} />
+            <Route exact path="/pagina2" element={<PaginaNumeroDos />} /> 
             
             {/* Rutas restantes */}
             <Route exact path="/login" element={<LoginPage />} />

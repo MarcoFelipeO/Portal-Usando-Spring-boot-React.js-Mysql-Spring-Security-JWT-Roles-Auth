@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const PlantillaPage = () => {
+const PaginaNumeroDos = () => {
     return (
         <div className="container mt-5">
             <div className="row">
@@ -16,4 +16,4 @@ const PlantillaPage = () => {
     );
 };
 
-export default PlantillaPage;
+export default PaginaNumeroDos;
