@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import UserService from "../service/UserService";
+import '../../styles/custom.css';
 
 
 function LoginPage(){
@@ -36,20 +37,22 @@ const handleSubmit = async (e) => {
 
 
     return(
-        <div className="auth-container">
-            <h2>Login</h2>
-            {error && <p className="error-message">{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label>Email: </label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className="form-group">
-                    <label>Contraseña: </label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                <button type="submit">Login</button>
-            </form>
+        <div className="background-image">
+            <div className="auth-container ">
+                <h2>Login</h2>
+                {error && <p className="error-message">{error}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label>Email: </label>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label>Contraseña: </label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
         </div>
     )
 
