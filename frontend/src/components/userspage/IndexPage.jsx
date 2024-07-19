@@ -25,7 +25,7 @@ const IndexPage = () => {
                         <h5 className="card-title">Avances en mis proyectos</h5>
                         <p className="card-tex text-white">This is a short description of the first card. It contains brief information about the content.</p>
                         <div className="d-flex align-items-center">
-                            <Link to="/link1" className="btn btn-outline-danger me-2">Ir a Avances de Proyectos</Link>
+                            <Link to="/link1" className="btn btn-outline-danger me-2">Ir a Avances de Proyectos </Link>
                             <a href="https://github.com/MarcoFelipeO" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-github github-icon"></i>
                             </a>
