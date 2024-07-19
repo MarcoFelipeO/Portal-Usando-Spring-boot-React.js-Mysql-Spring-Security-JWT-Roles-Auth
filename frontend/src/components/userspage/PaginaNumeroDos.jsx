@@ -9,7 +9,7 @@ const PaginaNumeroDos = () => {
                 <div className="col">
                     <h1>Bienvenido a la Nueva Página</h1>
                     <p>Esta es una plantilla básica para una nueva página en React.</p>
-                    <Link to="/" className="btn btn-primary">Volver a la Página Principal</Link>
+                    <Link to="/" className="btn btn-primary">Volver a la Página Principal haz click aqui</Link>
                 </div>
             </div>
         </div>
