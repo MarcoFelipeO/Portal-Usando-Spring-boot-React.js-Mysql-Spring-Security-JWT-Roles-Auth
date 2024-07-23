@@ -32,8 +32,8 @@ public class UsersManagementService {
         try {
             OurUsers ourUser = new OurUsers();
             ourUser.setEmail(registrationRequest.getEmail());
-            ourUser.setCity(registrationRequest.getCity());
-            ourUser.setRole(registrationRequest.getRole());
+            ourUser.setCiudad(registrationRequest.getCiudad());
+            ourUser.setRol(registrationRequest.getRol());
             ourUser.setNombre(registrationRequest.getNombre());
             ourUser.setApellido(registrationRequest.getApellido());
             ourUser.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
@@ -63,7 +63,7 @@ public class UsersManagementService {
             var refreshToken = jwtUtils.generateRefreshToken(new HashMap<>(), user);
             response.setStatusCode(200);
             response.setToken(jwt);
-            response.setRole(user.getRole());
+            response.setRol(user.getRol());
             response.setRefreshToken(refreshToken);
             response.setExpirationTime("24Hrs");
             response.setMessage("Loggeado de Manera Exitosa");
@@ -111,10 +111,10 @@ public class UsersManagementService {
             if (!result.isEmpty()) {
                 reqRes.setOurUsersList(result);
                 reqRes.setStatusCode(200);
-                reqRes.setMessage("Successful");
+                reqRes.setMessage("Exitoso");
             } else {
                 reqRes.setStatusCode(404);
-                reqRes.setMessage("No users found");
+                reqRes.setMessage("No se encontraron usuarios");
             }
             return reqRes;
         } catch (Exception e) {
@@ -168,8 +168,8 @@ public class UsersManagementService {
                 existingUser.setEmail(updatedUser.getEmail());
                 existingUser.setNombre(updatedUser.getNombre());
                 existingUser.setApellido(updatedUser.getApellido());
-                existingUser.setCity(updatedUser.getCity());
-                existingUser.setRole(updatedUser.getRole());
+                existingUser.setCiudad(updatedUser.getCiudad());
+                existingUser.setRol(updatedUser.getRol());
 
                 // Check if password is present in the request
                 if (updatedUser.getPassword() != null && !updatedUser.getPassword().isEmpty()) {

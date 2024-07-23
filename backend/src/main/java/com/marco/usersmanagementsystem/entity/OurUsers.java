@@ -22,12 +22,12 @@ public class OurUsers implements UserDetails {
     private String nombre;
     private String apellido;
     private String password;
-    private String city;
-    private String role;
+    private String ciudad;
+    private String rol;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role));
+        return List.of(new SimpleGrantedAuthority(rol));
     }
 
     @Override
