@@ -22,7 +22,7 @@ const handleSubmit = async (e) => {
         console.log(userData)
         if (userData.token) {
             localStorage.setItem('token', userData.token)
-            localStorage.setItem('role', userData.role)
+            localStorage.setItem('rol', userData.rol)
             navigate('/profile')
             window.location.reload();
         }else{
