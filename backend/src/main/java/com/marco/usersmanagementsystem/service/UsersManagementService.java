@@ -150,11 +150,11 @@ public class UsersManagementService {
                 reqRes.setMessage("Usuario eliminado Satisfactoriamente");
             } else {
                 reqRes.setStatusCode(404);
-                reqRes.setMessage("User not found for deletion");
+                reqRes.setMessage("Usuario no encontrado para eliminar");
             }
         } catch (Exception e) {
             reqRes.setStatusCode(500);
-            reqRes.setMessage("Error occurred while deleting user: " + e.getMessage());
+            reqRes.setMessage("Se produjo un error al eliminar el usuario: " + e.getMessage());
         }
         return reqRes;
     }
