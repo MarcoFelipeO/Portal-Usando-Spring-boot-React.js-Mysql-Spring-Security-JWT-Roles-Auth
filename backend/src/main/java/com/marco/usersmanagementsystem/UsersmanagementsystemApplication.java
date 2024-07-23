@@ -19,7 +19,7 @@ public class UsersmanagementsystemApplication {
 	public OpenAPI customOpenAPI(){
 		return new OpenAPI()
 			.info(new Info()
-				.title("MARCO Spring Boot 3 API")
+				.title("MARCO Spring Boot 3 API ")
 				.version("0.11")
 				.description("Aplicación de muestra Spring Boot 3 con Swagger")
 				.termsOfService("http://swagger.io/terms")
