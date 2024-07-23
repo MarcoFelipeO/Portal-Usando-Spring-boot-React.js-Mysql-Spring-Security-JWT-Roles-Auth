@@ -13,8 +13,8 @@ function RegistrationPage() {
         name: '',
         email: '',
         password: '',
-        role: '',
-        city: ''
+        rol: '',
+        ciudad: ''
     });
 
     const handleInputChange = (e) => {
@@ -35,8 +35,8 @@ function RegistrationPage() {
                 name: '',
                 email: '',
                 password: '',
-                role: '',
-                city: ''
+                rol: '',
+                ciudad: ''
             });
             alert('Usuario Registrado Exitosamente');
             navigate('/admin/user-management');
@@ -53,7 +53,7 @@ function RegistrationPage() {
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Nombre:</label>
-                    <input type="text" name="name" value={formData.name} onChange={handleInputChange} required />
+                    <input type="text" name="nombre" value={formData.nombre} onChange={handleInputChange} required />
                 </div>
                 <div className="form-group">
                     <label>Apellido:</label>
@@ -70,7 +70,7 @@ function RegistrationPage() {
                 
                 <div className="form-group">
                     <label>Rol:</label>
-                    <select className='form-select' name="role" value={formData.role} onChange={handleInputChange}required>
+                    <select className='form-select' name="rol" value={formData.rol} onChange={handleInputChange}required>
                         <option value="USER">USER</option>
                         <option value="ADMIN">ADMIN</option>
                     </select>
@@ -79,7 +79,7 @@ function RegistrationPage() {
 
                 <div className="form-group">
                     <label>Ciudad:</label>
-                    <input type="text" name="city" value={formData.city} onChange={handleInputChange} placeholder="Introduce tu ciudad" required />
+                    <input type="text" name="ciudad" value={formData.ciudad} onChange={handleInputChange} placeholder="Introduce tu ciudad" required />
                 </div>
                 <button type="submit">Registro</button>
             </form>

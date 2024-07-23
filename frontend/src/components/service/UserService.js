@@ -90,7 +90,7 @@ class UserService{
     /**AUTHENTICATION CHECKER */
     static logout(){
         localStorage.removeItem('token')
-        localStorage.removeItem('role')
+        localStorage.removeItem('rol')
     }
 
     static isAuthenticated(){
@@ -99,13 +99,13 @@ class UserService{
     }
 
     static isAdmin(){
-        const role = localStorage.getItem('role')
-        return role === 'ADMIN'
+        const rol = localStorage.getItem('rol')
+        return rol === 'ADMIN'
     }
 
     static isUser(){
-        const role = localStorage.getItem('role')
-        return role === 'USER'
+        const rol = localStorage.getItem('rol')
+        return rol === 'USER'
     }
 
     static adminOnly(){

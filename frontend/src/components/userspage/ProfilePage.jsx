@@ -27,10 +27,10 @@ function ProfilePage() {
         <div className="background-image">
             <div className="profile-page-container">
                 <h2>Información del perfil</h2>
-                <p>Nombre: {profileInfo.name}</p>
+                <p>Nombre: {profileInfo.nombre}</p>
                 <p>Email: {profileInfo.email}</p>
-                <p>Ciudad: {profileInfo.city}</p>
-                {profileInfo.role === "ADMIN" && (
+                <p>Ciudad: {profileInfo.ciudad}</p>
+                {profileInfo.rol === "ADMIN" && (
                     <>
                         
                             <Link to={`/update-user/${profileInfo.id}`} className='btn btn-primary'>
