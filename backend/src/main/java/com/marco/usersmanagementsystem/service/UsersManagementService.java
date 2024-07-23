@@ -119,7 +119,7 @@ public class UsersManagementService {
             return reqRes;
         } catch (Exception e) {
             reqRes.setStatusCode(500);
-            reqRes.setMessage("Error occurred: " + e.getMessage());
+            reqRes.setMessage("Se produjo un error: " + e.getMessage());
             return reqRes;
         }
     }
@@ -128,10 +128,10 @@ public class UsersManagementService {
     public ReqRes getUsersById(Integer id) {
         ReqRes reqRes = new ReqRes();
         try {
-            OurUsers usersById = usersRepo.findById(id).orElseThrow(() -> new RuntimeException("User Not found"));
+            OurUsers usersById = usersRepo.findById(id).orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
             reqRes.setOurUsers(usersById);
             reqRes.setStatusCode(200);
-            reqRes.setMessage("Users with id '" + id + "' found successfully");
+            reqRes.setMessage("Usuarios con identificación '" + id + "' encontrado exitosamente");
         } catch (Exception e) {
             reqRes.setStatusCode(500);
             reqRes.setMessage("Se produjo un error: " + e.getMessage());
