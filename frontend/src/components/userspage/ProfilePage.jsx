@@ -28,6 +28,7 @@ function ProfilePage() {
             <div className="profile-page-container">
                 <h2>Información del perfil</h2>
                 <p>Nombre: {profileInfo.nombre}</p>
+                <p>Apellido:{profileInfo.apellido}</p>
                 <p>Email: {profileInfo.email}</p>
                 <p>Ciudad: {profileInfo.ciudad}</p>
                 {profileInfo.rol === "ADMIN" && (

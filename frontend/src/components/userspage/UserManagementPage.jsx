@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import UserService from '../service/UserService';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../images/foto3.jpg';
+import '../../styles/custom.css';
+
 function UserManagementPage() {
   const [users, setUsers] = useState([]);
 
@@ -33,35 +37,37 @@ function UserManagementPage() {
   };
 
   return (
-    <div className="user-management-container">
-      <h2 className="mb-4">Gestión de usuarios</h2>
-      <Link to="/admin/register" className="btn btn-primary mb-3">Agregar Usuario</Link>
+    <div className="background-image">
+        <div className="user-management-container">
+          <h2 className="mb-4">Gestión de usuarios</h2>
+          <Link to="/admin/register" className="btn btn-primary mb-3">Agregar Usuario</Link>
 
-      <div className="table-responsive">
-        <table className="table table-striped mb-4">
-          <thead className="thead-dark">
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map(user => (
-              <tr key={user.id}>
-                <td>{user.id}</td>
-                <td>{user.nombre}</td>
-                <td>{user.email}</td>
-                <td>
-                  <Link to={`/update-user/${user.id}`} className="btn btn-sm btn-primary me-2">Actualizar</Link>
-                  <Link className="btn btn-sm btn-danger" onClick={() => deleteUser(user.id)}>Eliminar</Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          <div className="table-responsive">
+            <table className="table table-striped mb-4">
+              <thead className="thead-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map(user => (
+                  <tr key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.nombre}</td>
+                    <td>{user.email}</td>
+                    <td>
+                      <Link to={`/update-user/${user.id}`} className="btn btn-sm btn-primary me-2">Actualizar</Link>
+                      <Link className="btn btn-sm btn-danger" onClick={() => deleteUser(user.id)}>Eliminar</Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
     </div>
   );
 }
