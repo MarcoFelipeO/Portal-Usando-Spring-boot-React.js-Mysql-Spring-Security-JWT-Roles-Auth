@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import UserService from '../service/UserService';
 import { useNavigate } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../images/foto3.jpg';
+import '../../styles/custom.css';
+
 function RegistrationPage() {
     const navigate = useNavigate();
 
@@ -61,11 +65,11 @@ function RegistrationPage() {
                 </div>
                 <div className="form-group">
                     <label>Rol:</label>
-                    <input type="text" name="role" value={formData.role} onChange={handleInputChange} placeholder="Enter your role" required />
+                    <input type="text" name="role" value={formData.role} onChange={handleInputChange} placeholder="Ingresa tu rol" required />
                 </div>
                 <div className="form-group">
                     <label>Ciudad:</label>
-                    <input type="text" name="city" value={formData.city} onChange={handleInputChange} placeholder="Enter your city" required />
+                    <input type="text" name="city" value={formData.city} onChange={handleInputChange} placeholder="Introduce tu ciudad" required />
                 </div>
                 <button type="submit">Registro</button>
             </form>
