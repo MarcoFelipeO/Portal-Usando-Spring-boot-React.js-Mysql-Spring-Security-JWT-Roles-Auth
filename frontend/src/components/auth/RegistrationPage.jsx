@@ -56,6 +56,10 @@ function RegistrationPage() {
                     <input type="text" name="name" value={formData.name} onChange={handleInputChange} required />
                 </div>
                 <div className="form-group">
+                    <label>Apellido:</label>
+                    <input type="text" name="apellido" value={formData.apellido} onChange={handleInputChange} required />
+                </div>
+                <div className="form-group">
                     <label>Email:</label>
                     <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
                 </div>
@@ -63,10 +67,16 @@ function RegistrationPage() {
                     <label>Contraseña:</label>
                     <input type="password" name="password" value={formData.password} onChange={handleInputChange} required />
                 </div>
+                
                 <div className="form-group">
                     <label>Rol:</label>
-                    <input type="text" name="role" value={formData.role} onChange={handleInputChange} placeholder="Ingresa tu rol" required />
+                    <select className='form-select' name="role" value={formData.role} onChange={handleInputChange}required>
+                        <option value="USER">USER</option>
+                        <option value="ADMIN">ADMIN</option>
+                    </select>
                 </div>
+
+
                 <div className="form-group">
                     <label>Ciudad:</label>
                     <input type="text" name="city" value={formData.city} onChange={handleInputChange} placeholder="Introduce tu ciudad" required />
