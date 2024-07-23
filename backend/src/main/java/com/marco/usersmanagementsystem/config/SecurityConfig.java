@@ -34,6 +34,7 @@ public class SecurityConfig {
         httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(request-> request.requestMatchers("/auth/**", "/public/**").permitAll()
+                        .requestMatchers(AUTH_WHITELIST).permitAll() /*API DE SWAGGER */
                         .requestMatchers("/admin/**").hasAnyAuthority("ADMIN")
                         .requestMatchers("/user/**").hasAnyAuthority("USER")
                         .requestMatchers("/adminuser/**").hasAnyAuthority("ADMIN", "USER")
@@ -44,6 +45,19 @@ public class SecurityConfig {
                 );
         return httpSecurity.build();
     }
+
+    /*    API DE SWAGGER PARA PODER ACCEDER A LAS RUTAS POR LA URL   */
+        private static final String[] AUTH_WHITELIST ={
+                "/api/v1/auth**",
+                "/v3/api-docs/**",
+                "/v3/api-docs.yaml",
+                "/swagger-ui/**",
+                "/swagger-ui.html"
+        };
+    /*    API DE SWAGGER PARA PODER ACCEDER A LAS RUTAS POR LA URL   */
+
+
+
     @Bean
     public AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
