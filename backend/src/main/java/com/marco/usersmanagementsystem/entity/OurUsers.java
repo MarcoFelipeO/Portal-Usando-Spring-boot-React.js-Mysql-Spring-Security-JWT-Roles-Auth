@@ -20,6 +20,7 @@ public class OurUsers implements UserDetails {
     private Integer id;
     private String email;
     private String name;
+    private String apellido;
     private String password;
     private String city;
     private String role;
