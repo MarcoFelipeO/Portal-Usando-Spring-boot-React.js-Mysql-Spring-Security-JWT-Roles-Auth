@@ -34,7 +34,7 @@ public class UsersManagementService {
             ourUser.setEmail(registrationRequest.getEmail());
             ourUser.setCity(registrationRequest.getCity());
             ourUser.setRole(registrationRequest.getRole());
-            ourUser.setName(registrationRequest.getName());
+            ourUser.setNombre(registrationRequest.getNombre());
             ourUser.setApellido(registrationRequest.getApellido());
             ourUser.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
             OurUsers ourUsersResult = usersRepo.save(ourUser);
@@ -134,7 +134,7 @@ public class UsersManagementService {
             reqRes.setMessage("Users with id '" + id + "' found successfully");
         } catch (Exception e) {
             reqRes.setStatusCode(500);
-            reqRes.setMessage("Error occurred: " + e.getMessage());
+            reqRes.setMessage("Se produjo un error: " + e.getMessage());
         }
         return reqRes;
     }
@@ -166,7 +166,7 @@ public class UsersManagementService {
             if (userOptional.isPresent()) {
                 OurUsers existingUser = userOptional.get();
                 existingUser.setEmail(updatedUser.getEmail());
-                existingUser.setName(updatedUser.getName());
+                existingUser.setNombre(updatedUser.getNombre());
                 existingUser.setApellido(updatedUser.getApellido());
                 existingUser.setCity(updatedUser.getCity());
                 existingUser.setRole(updatedUser.getRole());
