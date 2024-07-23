@@ -51,7 +51,7 @@ function UserManagementPage() {
             {users.map(user => (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                <td>{user.name}</td>
+                <td>{user.nombre}</td>
                 <td>{user.email}</td>
                 <td>
                   <Link to={`/update-user/${user.id}`} className="btn btn-sm btn-primary me-2">Actualizar</Link>

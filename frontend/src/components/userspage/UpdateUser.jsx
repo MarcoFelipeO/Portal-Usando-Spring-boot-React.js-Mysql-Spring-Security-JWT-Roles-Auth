@@ -8,7 +8,7 @@ function UpdateUser() {
 
 
   const [userData, setUserData] = useState({
-    name: '',
+    nombre: '',
     email: '',
     role: '',
     city: ''
@@ -62,7 +62,7 @@ function UpdateUser() {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Nombre:</label>
-          <input type="text" name="name" value={userData.name} onChange={handleInputChange} />
+          <input type="text" name="nombre" value={userData.nombre} onChange={handleInputChange} />
         </div>
         <div className="form-group">
           <label>Email:</label>
