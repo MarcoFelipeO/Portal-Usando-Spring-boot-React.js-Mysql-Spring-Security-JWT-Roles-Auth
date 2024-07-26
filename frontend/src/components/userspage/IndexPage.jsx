@@ -6,24 +6,28 @@ import '../../styles/custom.css';
 import { Link } from 'react-router-dom';
 
 const IndexPage = () => {
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchUsers = async () => {
-            try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-                setUsers(response.data);
-            } catch (error) {
-                setError(error);
-            } finally {
-                setLoading(false);
-            }
-        };
+    {/*
+        const [users, setUsers] = useState([]);
+        const [loading, setLoading] = useState(true);
+        const [error, setError] = useState(null);
 
-        fetchUsers();
-    }, []);
+            useEffect(() => {
+            const fetchUsers = async () => {
+                try {
+                    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+                    setUsers(response.data);
+                } catch (error) {
+                    setError(error);
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            fetchUsers();
+        }, []);
+    */}
+
 
     return (
         <div className="background-image">
@@ -61,7 +65,7 @@ const IndexPage = () => {
                             </div>
                         </div>
                         
-
+                    {/* 
                         <div className="row mt-5">
                             <div className="col-md-12">
                                 <div className="card text-bg-dark">
@@ -86,6 +90,7 @@ const IndexPage = () => {
                                 </div>
                             </div>
                         </div>
+                        */}
 
 
                         <div className="row mt-5">
