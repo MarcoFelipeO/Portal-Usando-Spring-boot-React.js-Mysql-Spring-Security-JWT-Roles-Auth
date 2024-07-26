@@ -33,7 +33,7 @@ public class UsersManagementService {
             OurUsers ourUser = new OurUsers();
             ourUser.setEmail(registrationRequest.getEmail());
             ourUser.setCiudad(registrationRequest.getCiudad());
-            ourUser.setRol(registrationRequest.getRol());
+            ourUser.setRole(registrationRequest.getRole());
             ourUser.setNombre(registrationRequest.getNombre());
             ourUser.setApellido(registrationRequest.getApellido());
             ourUser.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
@@ -63,7 +63,7 @@ public class UsersManagementService {
             var refreshToken = jwtUtils.generateRefreshToken(new HashMap<>(), user);
             response.setStatusCode(200);
             response.setToken(jwt);
-            response.setRol(user.getRol());
+            response.setRole(user.getRole());
             response.setRefreshToken(refreshToken);
             response.setExpirationTime("24Hrs");
             response.setMessage("Loggeado de Manera Exitosa");
@@ -169,7 +169,7 @@ public class UsersManagementService {
                 existingUser.setNombre(updatedUser.getNombre());
                 existingUser.setApellido(updatedUser.getApellido());
                 existingUser.setCiudad(updatedUser.getCiudad());
-                existingUser.setRol(updatedUser.getRol());
+                existingUser.setRole(updatedUser.getRole());
 
                 // Check if password is present in the request
                 if (updatedUser.getPassword() != null && !updatedUser.getPassword().isEmpty()) {

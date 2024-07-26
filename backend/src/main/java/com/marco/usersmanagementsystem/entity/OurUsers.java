@@ -23,11 +23,11 @@ public class OurUsers implements UserDetails {
     private String apellido;
     private String password;
     private String ciudad;
-    private String rol;
+    private String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(rol));
+        return List.of(new SimpleGrantedAuthority(role));
     }
 
     @Override
